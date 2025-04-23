@@ -8,62 +8,76 @@
 </head>
 <body>
 
-    <h1>COMAP Compass</h1>
+  <h1>COMAP Compass</h1>
 
-    <p>Search here:</p>
+  <p>Search here:</p>
 
-    <input type="text" id="search" name="query" placeholder="Type your search here...">
-    <button type="submit">Search</button>
-
-
-
-    <div class="yearBox">
-      <input type="checkbox" id="2017" name="2017" value="2017">
-      <label for="2017"> 2017</label><br>
-      <input type="checkbox" id="2018" name="2018" value="2018">
-      <label for="2018"> 2018</label><br>
-      <input type="checkbox" id="2019" name="2019" value="2019">
-      <label for="2019"> 2019</label><br>
-      <input type="checkbox" id="2020" name="2020" value="2020">
-      <label for="2020"> 2020</label><br>
-      <input type="checkbox" id="2021" name="2021" value="2021">
-      <label for="2021"> 2021</label><br>
-      <input type="checkbox" id="2022" name="2022" value="2022">
-      <label for="2022"> 2022</label><br>
-      <input type="checkbox" id="2023" name="2023" value="2023">
-      <label for="2023"> 2023</label><br>
-      <input type="checkbox" id="2024" name="2024" value="2024">
-      <label for="2024"> 2024</label><br>
-    </div>
-
-    <div class="problemBox">
-      <input type="checkbox" id="a" name="a" value="a">
-      <label for="a"> A</label><br>
-      <input type="checkbox" id="b" name="b" value="b">
-      <label for="b"> B</label><br>
-      <input type="checkbox" id="c" name="c" value="c">
-      <label for="c"> C</label><br>
-      <input type="checkbox" id="d" name="d" value="d">
-      <label for="d"> D</label><br>
-      <input type="checkbox" id="e" name="e" value="e">
-      <label for="e"> E</label><br>
-      <input type="checkbox" id="f" name="f" value="f">
-      <label for="f"> F</label><br>
-      <input type="checkbox" id="y" name="y" value="y">
-      <label for="y"> Y</label><br>
-      <input type="checkbox" id="z" name="z" value="z">
-      <label for="z"> Z</label><br>
-    </div>
+  <input type="text" id="search" name="query" placeholder="Type your search here...">
+  <button type="submit">Search</button>
 
 
 
-    <!--Make sure the form has the autocomplete function switched off:-->
+  <div class="yearBox">
+    <input type="checkbox" id="2017" name="2017" value="2017">
+    <label for="2017"> 2017</label><br>
+    <input type="checkbox" id="2018" name="2018" value="2018">
+    <label for="2018"> 2018</label><br>
+    <input type="checkbox" id="2019" name="2019" value="2019">
+    <label for="2019"> 2019</label><br>
+    <input type="checkbox" id="2020" name="2020" value="2020">
+    <label for="2020"> 2020</label><br>
+    <input type="checkbox" id="2021" name="2021" value="2021">
+    <label for="2021"> 2021</label><br>
+    <input type="checkbox" id="2022" name="2022" value="2022">
+    <label for="2022"> 2022</label><br>
+    <input type="checkbox" id="2023" name="2023" value="2023">
+    <label for="2023"> 2023</label><br>
+    <input type="checkbox" id="2024" name="2024" value="2024">
+    <label for="2024"> 2024</label><br>
+  </div>
+
+  <div class="problemBox">
+    <input type="checkbox" id="a" name="a" value="a">
+    <label for="a"> A</label><br>
+    <input type="checkbox" id="b" name="b" value="b">
+    <label for="b"> B</label><br>
+    <input type="checkbox" id="c" name="c" value="c">
+    <label for="c"> C</label><br>
+    <input type="checkbox" id="d" name="d" value="d">
+    <label for="d"> D</label><br>
+    <input type="checkbox" id="e" name="e" value="e">
+    <label for="e"> E</label><br>
+    <input type="checkbox" id="f" name="f" value="f">
+    <label for="f"> F</label><br>
+    <input type="checkbox" id="y" name="y" value="y">
+    <label for="y"> Y</label><br>
+    <input type="checkbox" id="z" name="z" value="z">
+    <label for="z"> Z</label><br>
+  </div>
+
+  <!-- This is the Autocomplete Dropbox for the keywords -->
+  <div>
+    <input list="keywords" placeholder="Start typing...">
+
+    <datalist id="keywords">
+      <option value="this">
+      <option value="is">
+      <option value="the">
+      <option value="autocomplete">
+      <option value="dropbox">
+      <option value="hooray">
+    </datalist>
+  </div>
+
+  <!-- Commented off just in case we need it later, feel free to remove if not :) -->
+
+    <!--Make sure the form has the autocomplete function switched off:
 <form autocomplete="off" action="/action_page.php">
     <div class="autocomplete" style="width:300px;">
       <input id="myInput" type="text" name="myCountry" placeholder="Country">
     </div>
     <input type="submit">
-  </form>
+  </form> -->
 
 </body>
 </html>
