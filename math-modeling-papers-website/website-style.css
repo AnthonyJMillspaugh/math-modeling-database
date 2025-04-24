@@ -1,8 +1,21 @@
-
-div {
-    accent-color: blue;
-}
-
 h1 {
     color: blue;
+    text-align: center;
+    font-family: cursive;
 }
+
+.center {
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 10px;
+}
+
+div[id="search-div"] {
+    text-align: center;
+}
+
+button {
+    margin-left: 10%;
+}
+
+
