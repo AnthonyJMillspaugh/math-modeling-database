@@ -4,6 +4,7 @@ h1 {
     font-family: cursive;
 }
 
+/* This function can be used to center any div or block elements, though im unsure if itll work well with inline elements*/
 .center {
     margin-left: 25%;
     margin-right: 25%;
