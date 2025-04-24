@@ -1,22 +1,41 @@
-h1 {
-    color: blue;
-    text-align: center;
-    font-family: cursive;
-}
-
-/* This function can be used to center any div or block elements, though im unsure if itll work well with inline elements*/
+/* This function can be used to center any div or block elements, though im unsure if itll work well with inline elements */
 .center {
     margin-left: 25%;
     margin-right: 25%;
     padding: 10px;
 }
 
-div[id="search-div"] {
+h1 {
+    color: blue;
+    text-align: center;
+    font-family: cursive;
+}
+
+div[id="searchDiv"] {
     text-align: center;
 }
 
 button {
     margin-left: 10%;
 }
+
+div[id="autoDropDown"] {
+    padding-top: 20px;
+    text-align: center;
+}
+
+div[id="yearBox"] {
+    font-family:sans-serif;
+    text-align: center;
+}
+
+div[id="problemBox"] {
+    font-family:sans-serif;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+
 
 
