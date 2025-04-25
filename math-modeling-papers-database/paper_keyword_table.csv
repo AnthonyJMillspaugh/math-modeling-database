@@ -1,0 +1,972 @@
+team_control_num,keyword_text
+66500,return on investment
+66500,water balance equation
+66500,particle swim optimization
+66500,monte carlo method
+55585,traffic flow model
+55585,self driving vehicle
+55585,cellular automata
+55583,traffic flow
+55583,self driving
+55583,cooperating system
+55285,security check
+55285,poisson distribution
+55285,gaussian distribution
+55285,queuing methods
+55295,queueing networks
+55295,routing algorithms
+55295,lyapunov optimization
+76082,fresnal reflection coefficient equation
+76082,sea signal reflection model
+76082,transmission loss
+77845,multi-hop
+77845,mhpm
+77845,msrsm
+77845,free-space path loss
+88255,high frequency radio
+88255,ocean surface reflection
+88255,multi-hop propogation
+73410,population of languages
+73410,transition
+73410,office locations
+74316,autoregressive model
+74316,co-integration
+74316,differential system
+74316,markov chain
+74316,cluster analysis
+74316,mine model
+77238,language development model
+77238,ahp
+77238,fuzzy clustering
+77238,p-center model
+79002,language distribution
+79002,time series difference equation model
+79002,dynamic simulation
+79002,site selection
+79002,cost-profit analysis
+72969,cafe
+72969,energy profile
+72969,correlation analysis
+72969,arma-gpr model
+72969,multi-objective optimization
+80560,new keynesian
+80560,is-lm model
+80560,linear regression
+80560,time series
+80560,mds
+82150,energy profile
+82150,var model
+82150,genetic algorithm
+82150,energy compact
+73156,site selection model
+73156,logistic model
+73156,q-type clustering model
+73156,electric network
+78826,classification system
+78826,logistic growth
+78826,urgency index
+78826,elecomb
+78826,nonlinear programming model
+80386,balanced development
+80386,queuing theory
+80386,logisitic population competition
+80386,standard deviation ellipse
+80386,discriminant analysis
+82504,k-means clustering
+82504,markov method
+82504,gdp per capita
+82504,population density
+82504,gini coefficient
+72968,spec model
+72968,self-regulatory factor
+72968,weighed average method
+72968,data mining
+72968,climate impacts
+72968,analytic hierarchy process
+73119,fragile state
+73119,climate change
+73119,psa
+73119,gm(1 1)
+74971,climate change
+74971,fragility
+74971,ewm
+74971,fuzzy clustering
+89499,psr model
+89499,entropy weight method
+89499,discriminant analysis
+88508,pricing model of pi
+88508,risk model of pi
+88508,topsis method
+88508,markov chain
+88508,external effect
+93036,private information
+93036,pricing strategy
+93036,dynamic system
+93036,network effect
+1902727,logistics
+1902727,intake and expenditure
+1902727,ecosystem balance
+1902727,integral regression
+1910246,physical characteristics
+1910246,energy expendtitures and calaroic intake
+1910246,dragon-sheep-habitat model
+1910246,climate impacts
+1919022,energy flow
+1919022,n-population meta-population model
+1919022,growth model
+1919022,habitat-occupancy proportion
+1919022,ecosystem influence
+1908286,multi-objective programming
+1908286,dynamic programming
+1908286,drone rescue model
+1908286,ahp
+1908904,drone
+1908904,route planning
+1908904,3d bin-packing
+1908904,ahp
+1915782,drone
+1915782,location problem
+1915782,loading problem
+1915782,emergency rescue
+1924588,optimization
+1924588,aco
+1924588,gridding
+1924588,voronio
+1924588,dijkstra
+1906204,recommendation system
+1906204,regression
+1906204,pca
+1906204,association rule learning
+1909434,vector autoregressive model
+1909434,data visualization
+1909434,correlation coefficient
+1909434,decision tree
+1922154,opioid
+1922154,cellular automata
+1922154,concentration index
+1922154,spread
+1922154,characteristics
+1922074,emergency evacuation plan
+1922074,ant colony optimization algorithm
+1922074,time model
+1922074,dijkstra algorithm
+1922074,other factors
+1922748,n&m model
+1922748,stable evacuation speed model
+1922748,ford-fulkerson algorithm
+1922748,system dynamic planning
+1902029,ecosystem services
+1902029,value methods
+1902029,value equivalence factors
+1902029,dynamic assessment
+1902054,ecological services
+1902054,valuation
+1902054,logistic growth model
+1903455,ecosystem services
+1903455,esvm
+1903455,svm
+1903455,sustainable development factor
+1916129,ecological value
+1916129,bp nerve network
+1916129,long-term ecological self-recover model
+1916129,cost-benefit analysis
+1916129,green gdp
+1916129,externalities
+1916777,ecosystem services
+1916777,land use projects
+1916777,principal component analysis
+1916777,environmental cost
+1904381,digital currency
+1904381,fixed exchange rate
+1904381,float exchange rate
+1905127,digital currency
+1905127,fisher equation
+1905127,dmp model
+1905127,optimal currency area
+2001334,arima
+2001334,fish migration
+2001334,earnings evaluation
+2001334,computer simulation
+2002116,text-based measure
+2002116,informative text selection
+2002116,reputation quantification
+2002116,sales strategy formation
+2003717,logistic regression
+2003717,lstm
+2003717,lda topic model
+2003717,granger cause test
+2003717,sentiment analysis
+2004647,the rrbs model
+2004647,the reputation model
+2004647,correlation analysis
+2007707,online sales strategies
+2007707,text sentiment analysis
+2007707,deep learning
+2007707,difference model
+2007707,principal component analysis
+2009116,lexicon-based approach
+2009116,emotion score evaluation system
+2009116,principal component analysis
+2009116,time series model
+2009116,arima
+2009116,non parametric test
+2010638,correlation analysis
+2010638,multinomial logistic regression
+2010638,natural language processing
+2010638,time series analysis
+2002526,network
+2002526,indicators
+2002526,social network analysis
+2002526,motif
+2003723,team strategy
+2003723,football
+2003723,network science
+2003723,logistic regression
+2006782,passing network
+2006782,adversarial regression
+2006782,defensive counterattack
+2013140,multi-level network analysis model
+2013140,entropy weight method
+2013140,multi-angle team performance evaluation model
+2013140,team improvement suggestions
+2013245,network
+2013245,cooperation structure
+2013245,sliding window model
+2013245,teaming strategies
+2015044,passing network
+2015044,performance indicator
+2015044,soccer analysis
+2008521,ge matrix
+2008521,comprehensive evaluation
+2008521,pii
+2010035,k-means algorithm
+2010035,dynamic programming
+2010035,single-use or disposable plastic
+2010035,plastic waste
+2016287,disposable plastic
+2016287,multivariate time series
+2016287,ewm
+2016287,pca
+2005623,sea level rising
+2005623,edp
+2005623,policies
+2005623,ewm
+2005623,lotka-volterra model
+2006291,circular cone simulating
+2006291,edps and refugees
+2006291,game theory and political simulating
+2006291,national culture changing model
+2006291,combined policies
+2006291,lyapunov’s second method
+2013733,markov-chain
+2013733,specific-factor model
+2013733,charging model
+2013733,discrete mdp
+2100454,decomposition rate
+2100454,multi-environment
+2100454,gause’s model
+2100454,biodiversity
+2101951,fungal consortia
+2101951,multiple fungal modelling
+2101951,biodiversity
+2103782,biodiversity
+2103782,competitive relations
+2103782,moisture tolerance
+2103782,decomposition rate
+2103782,logistic growth model
+2110178,biodiversity
+2110178,fungi
+2110178,lotka-volterra equation
+2110178,michaelis-menten equation
+2120808,differential equation
+2120808,hierarchical clustering
+2120808,biodiversity
+2120808,fungi
+2122025,cellular automata
+2122025,nonlinear
+2122025,stochastic gradient descent
+2122025,fungal decomposition
+2102199,sensitivity analysis
+2102199,tabu search algorithm
+2102199,poisson distribution
+2102199,multi-objective optimization
+2102199,fighting wildfires
+2104673,drone
+2104673,optimization
+2104673,regional discretization
+2104673,fire dynamic models
+2104673,cellular automata
+2105363,signal-to-noise ratio
+2105363,commensurable
+2105363,safety factor
+2116496,gm model
+2116496,minimum spanning tree model
+2116496,k-means model
+2116496,drone arrangement model
+2127300,multivariate optimal programming
+2127300,lstm
+2127300,genetic algorithm
+2101166,time-step difference equation
+2101166,agglomerative clustering
+2101166,convolutional neural network
+2101166,auto-encoder
+2101587,vespa mandarinia
+2101587,convolutional neural network
+2101587,machine learning
+2101587,natural language processing
+2101587,pest control
+2107815,logistic-model
+2107815,correlation analysis
+2107815,forgetting factor
+2107815,cnn
+2107815,lda
+2107870,semi-supervised learning
+2107870,semantic analysis
+2107870,reaction-diffusion model
+2107870,spatial species spread
+2107870,convolutional neural network
+2107870,k-means clustering
+2109298,cellula automata
+2109298,auroc score
+2109298,baum-welch algorithm
+2109298,naïve bayes inference
+2123823,environmental suitability
+2123823,pseudo labelling
+2123823,regression model with longitudinal data
+2123823,text mining
+2123823,cnn
+2123823,k-means clustering
+2100112,directed network
+2100112,bayesian network
+2100112,change points analysis
+2100242,network
+2100242,inheriting degree
+2100242,influence index
+2100242,vector distance
+2100242,pagerank
+2101855,music classification
+2101855,weight cosine similarity
+2101855,rescaled pagerank
+2101855,dynamic social networks
+2106028,social network
+2106028,music evolution
+2106028,bollinger bands
+2106028,correlation analysis
+2106028,factor analysis
+2107091,sna
+2107091,combination of features
+2107091,pagerank
+2107091,pareto’s principle
+2107091,scale-free network
+2107091,slide window
+2124497,complex network
+2124497,discrete fourier transform
+2124497,kruskal-wallis test
+2124497,closeness centrality
+2124497,bayes error rate
+2102057,eee model
+2102057,equity
+2102057,sustainability
+2102057,logistic model
+2113869,food system
+2113869,equity
+2113869,sustainability
+2113869,production model
+2119031,food system
+2119031,supply and demand differential equation
+2119031,nonlinear programming
+2119893,combination weighting method
+2119893,equilibrium point
+2119893,synergistic effect
+2122175,food system
+2122175,ewm
+2122175,resilience
+2122175,food security
+2102185,higher education system
+2102185,vertical contrast
+2102185,policies
+2102185,five-year plans
+2102185,vision
+2102185,relative score
+2102185,crosswise contrast
+2102185,sustainability
+2102185,health
+2103649,higher education system
+2103649,targeted policies
+2103649,markov chain
+2103649,kolmogorov - smirnov test
+2103649,dea-malmquist model
+2103649,ahp model
+2109443,entropy weight method
+2109443,time series prediction
+2109443,mckinsey matrix
+2109443,ahp
+2122374,higher education
+2122374,oecd
+2122374,iew-topsis
+2123945,higher education system
+2123945,three-dimensional vector
+2123945,n-verhulst
+2123945,ewm
+2123945,gdm
+2123945,policy
+2123945,health and sustainability
+2200289,physiology
+2200289,simulated annealing algorithm
+2200289,dynamics
+2207343,power curve
+2207343,formation planning
+2207343,dynamics model
+2207343,nonlinear programming
+2209466,individual time trial
+2209466,dynamic programming
+2209466,power curve
+2209466,optimal power distribution
+2209812,power curve
+2209812,dynamics analysis
+2209812,pmp
+2209812,behrman equation
+2209812,dp
+2210307,time trial
+2210307,power overall planning
+2210307,multivariate nonlinear programming
+2212245,cyclist
+2212245,ode
+2212245,time trial
+2212245,power profile
+2216547,power curve
+2216547,newtonian mechanics
+2216547,dynamic programming
+2216547,cycling
+2200084,resource allocation network(ran)
+2200084,auction theory
+2200084,marginal utility
+2200084,independent private value (ipv) model
+2200084,linear programming
+2202748,transportation model
+2202748,multi-objective programming
+2202748,distribution and tradeoff
+2207864,dynamic programming
+2207864,topsis method based on ewm
+2207864,multi-objective-programming
+2207864,multi-stage discussion
+2211922,double-dam system
+2211922,multi-objective programming
+2211922,management
+2211922,genetic algorithm
+2211922,principal component analysis
+2211922,optimization model
+2211922,difference equation model
+2213970,simulated annealing
+2213970,game theory
+2213970,newton iteration
+2213970,water-shortage index
+2200401,grid strategy
+2200401,time series analysis
+2200401,arima
+2200401,statistical test
+2200401,quantitative trading
+2200688,forecasting
+2200688,sliding window mechanism
+2200688,prophet
+2200688,5-day sma
+2203120,quantitative investment
+2203120,arima model
+2203120,dynamic programming
+2204883,gold
+2204883,multi-objective linear programming
+2204883,bitcoin
+2204883,risk and return
+2204883,sensitivity analysis
+2204883,long short-term memory
+2204883,trading strategy
+2208834,modified dollar neutral strategy
+2208834,cointegration
+2208834,pairs trading
+2208834,risk evaluation
+2212336,arima-lstm model
+2212336,genetic algorithm
+2212336,dynamic programming
+2218743,arima algorithm
+2218743,multi objective programming solution
+2218743,nsgs-ii algorithm
+2218743,downside semi-variance
+2218743,cvar
+2218931,lm-bp
+2218931,long and short term forecast
+2218931,circular decision
+2218931,quantitative investment
+2224507,mathematical optimization model
+2224507,lstm model
+2224507,voting system
+2229059,momentum trading
+2229059,noise cancellation
+2229059,technical analysis
+2229059,reversion to mean
+2229059,normalization
+2229059,time aggregation
+2208928,data and analytics(d&a) systems
+2208928,ahp-ewm method
+2208928,maturity level
+2208928,kpis
+2208928,fuzzy synthetic evaluation model
+2208928,vector optimization model
+2208928,scale-demand method
+2215444,data analysis
+2215444,maturity evaluation model
+2215444,ahp-ewm
+2215444,system dynamics
+2215444,apriori
+2224178,data and analytics (d&a) system
+2224178,monte carlo simulation
+2224178,meta-network
+2224178,pca
+2224178,stochastic petri net (spn)
+2202171,multi-objective decision
+2202171,carbon sequestration
+2202171,logistic model
+2202666,carbon sequestration
+2202666,forest value evaluation model
+2202666,forestry carbon sequestration model
+2202666,forest management
+2202838,carbon sequestration
+2202838,objective programming
+2202838,forest management model for carbon sequestration or society
+2202838,ge matrix
+2203489,linear programming
+2203489,priority factors
+2203489,intermediate cutting
+2203489,forest management
+2209336,e^3 − m model
+2209336,cutting cycle
+2209336,transition point
+2209336,carbon sequestration
+2209336,soil fertility
+2218144,forest management
+2218144,fhwp model
+2218144,bat algorithm
+2218144,cee model
+2220714,ahp
+2220714,harvesting strategy
+2220714,the mfe model
+2220714,the tpe model
+2220714,npp
+2223269,carbon sequestration
+2223269,forest management
+2223269,multi-objective programming
+2223269,harvest
+2223495,differential equations
+2223495,multiple objective planning
+2223495,evolutionary game
+2223495,tev
+2208238,theil index
+2208238,monte carlo simulation
+2208238,path anaysis
+2208238,sharply model
+2208238,game model
+2208238,factor analysis
+2209952,entropy weight method
+2209952,ge matrix
+2209952,oligopoly market
+2209952,gaussian noise
+2211240,equity
+2211240,asteroid mining
+2211240,ewm
+2211240,cvm
+2211240,daea model
+2211240,p&a model
+2218577,global equity
+2218577,comparative advantage
+2218577,grey forecast
+2218577,asteroid mining
+2218577,topsis
+2218577,cluster analysis
+2220722,asteroid mining
+2220722,ahp
+2220722,entropy weight method
+2220722,factor analysis method
+2224021,asteroid mining
+2224021,structural equation modeling
+2224021,global equity index
+2224021,cobb-douglas production
+2003298,proper orthogonal decomposition
+2003298,fish migration
+2003298,differential equation
+2003298,fishing strategies
+2003485,migration of fish populations
+2003485,macleaf model
+2003485,prediction
+2004833,oceanic thermal equilibrium model
+2004833,fish school growth model
+2004833,fishery company economic benefit model
+2004833,fish migration
+2007799,cellular automaton
+2007799,matlab
+2007799,herring
+2007799,mackerel
+2007799,sst
+2018167,linear prediction
+2018167,cellular automaton
+2018167,fuzzy comprehensive evaluation method
+2007698,periodic sand-water cell automaton model
+2007698,multivariate analysis
+2007698,quantified and visualized
+2007698,concentration gradient method
+2011873,mohr-coulomb yielding criteria
+2011873,horton’s equation
+2011873,van genuchten model
+2011873,internal friction angle
+2011873,ansys simulation
+2013836,cellular automata
+2013836,evolution of three-dimensional complex space-time systems
+2013836,the longest lasting sandcastle foundation
+2019696,3d sandcastle model
+2019696,fluid-structure interaction
+2019696,optimizing model
+2300661,drought
+2300661,interations
+2300661,biomass
+2300661,benefits
+2300661,pollution
+2300661,habitat reduction
+2300136,wildlife conservation
+2300136,community-based management
+2300136,net-work based modelling
+2400996,lamprey
+2400996,sex ratio
+2400996,lotka-volterra
+2400996,correlation matrix
+2400996,stability
+2424371,lampreys
+2424371,pde
+2424371,finite volume method
+2424371,3-r index
+2424371,sex ratio
+2300336,community succession
+2300336,drought resistance
+2300336,niche width
+2300336,population interactions
+2300336,beverton-holt equation
+2303950,growth model
+2303950,competition model
+2303950,facilitation model
+2303950,4th runge-kutta
+2303950,topsis
+2309229,lotka-volterra model
+2309229,biodiversity
+2309229,irregular drought
+2309229,complementary effect
+2316994,community stability
+2316994,biodiversity
+2316994,drought
+2316994,differential equation
+2316994,ahp model
+2321860,drought stress
+2321860,interspecies relationship
+2321860,biodiversity
+2321860,population density
+2321860,biomass
+2321860,soil water content
+2322687,partial differential equations
+2322687,spatiotemporal analysis
+2322687,drought modeling
+2315379,grid method
+2315379,dual-goal planning
+2315379,dijkstra's algorithm
+2315379,non-linear regression
+2318300,odes
+2318300,utility function
+2318300,long-term behavior
+2318300,optimization
+2318300,stability
+2318300,jacobian linearization
+2301192,prophet
+2301192,sirs
+2301192,multiple linear regression
+2301192,bp neural network
+2301192,k-means++
+2307946,wordle
+2307946,arima
+2307946,lightgbm
+2307946,mmoe
+2307946,data augmentation
+2307946,feature engineering
+2307946,k-means
+2307946,sensitivity analysis
+2309397,arima-bp
+2309397,lstm
+2309397,gmm
+2309397,apriori algorithm
+2309397,word attributes
+2310767,arima-lstm model
+2310767,correlation analysis
+2310767,stacking
+2310767,pca
+2310767,gmm
+2310767,wordle
+2311035,wordle
+2311035,lstm
+2311035,recursive regression
+2311035,xgboost
+2311035,feature engineering
+2311717,gaussian regression
+2311717,poisson process
+2311717,bp neural network
+2311717,k-means
+2314151,wordle analysis
+2314151,prophet
+2314151,high-order partial correlation
+2314151,multi-objective regression forecasting
+2314151,k-means
+2318036,wordle
+2318036,dynamic system
+2318036,simulation
+2318036,k-means
+2318036,random forest
+2318982,arima
+2318982,multiple linear regression
+2318982,markov chains
+2318982,k-prototypes clustering
+2322645,entropy
+2322645,lasso regression
+2322645,mcmc
+2322645,bayesian methods
+2322645,causal inference
+2300229,sustainable development goals
+2300229,graph centrality
+2300229,topsis
+2300229,entropy weight method
+2303967,sustainable development goals
+2303967,system dynamics
+2303967,dynamic network
+2303967,priority evaluation
+2303967,correlation coefficient
+2303967,cvm
+2303967,ewm
+2303967,arima
+2304962,sdg
+2304962,multiple complex networks
+2304962,pearson correlation coefficient
+2304962,system dynamics
+2301428,ewm-ahp algorithm
+2301428,alarp
+2301428,risk indicator
+2301428,coupling coordination analysis
+2305598,lsn evaluation model
+2305598,lpi
+2305598,pia-nn model
+2305598,ahp
+2307336,light pollution
+2307336,intervention strategies
+2307336,ewm-topsis
+2307336,differential equation
+2308000,light pollution
+2308000,projection pursuit
+2308000,ge matrix
+2308000,priority factor
+2308000,goal planning
+2312411,light pollution risk level
+2312411,ewm-topsis evaluation
+2312411,arima
+2312411,light pollution control
+2314354,light pollution system model
+2314354,k-means clustering algorithm
+2314354,entropy weight method
+2314817,light pollution
+2314817,ese model
+2314817,lpra model
+2314817,ahp
+2314817,k-means algorithm
+2314817,ge cube
+2320131,light pollution
+2320131,raster method
+2320131,k-means algorithm
+2320131,strategy intensity factor
+2305794,green gdp
+2305794,climate mitigation
+2305794,life cycle curve
+2305794,ahp
+2305794,ewm
+2305794,nonlinear programming
+2305794,super-game theory
+2311258,fuzzy comprehensive evaluation
+2311258,time-space analysis
+2311258,game theory
+2311258,pvar
+2311517,climate mitigation
+2311517,green gdp
+2311517,regression analysis
+2311517,arima
+2330646,price forecasting
+2330646,lightgbm
+2330646,shap
+2330646,multiple linear regression
+2330646,feature importance ranking
+2330646,k-means clustering
+2332142,principal component analysis
+2332142,time series
+2332142,stepwise regression
+2330003,the olympics
+2330003,sustainability
+2330003,fixed and rotating
+2330003,did
+2330003,krr
+2330003,alm-admm
+2330610,toc
+2330610,opem model
+2330610,ewm and ahp
+2330610,topsis
+2330610,k-means and fcm
+2330760,olympic games
+2330760,ahp-critic
+2330760,k-means
+2330760,gm(1 1)
+2405424,changing sex ratios
+2405424,ideal reference model
+2405424,constant sex ratio model
+2405424,model of changing sex ratios
+2405424,entropy weighting method
+2407093,feedback
+2407093,nicholson-bailey model
+2407093,ecosystem stability
+2407093,biological invasion
+2425397,discrete population dynamics modeling
+2425397,lampreys sex ratio
+2425397,lampreys metamorphosis
+2425397,ecosystem stability
+2407038,submersible trajectory
+2407038,dynamical analysis
+2407038,grid analysis
+2407038,bayes theorem
+2407038,sensitivity analysis
+2411570,submersible
+2411570,location
+2411570,search equipment
+2411570,differential equation
+2419984,dynamics model
+2419984,monte carlo simulation
+2419984,ant colony algorithm
+2419984,cost-benefit analysis based on ewm
+2419984,bayesian detection
+2425792,kalman filter
+2425792,inertial navigation
+2425792,computational fluid dynamics
+2425792,principle components analysis
+2425792,voronoi diagram
+2401298,tennis
+2401298,momentum
+2401298,bayesian networks
+2401298,statistical analysis
+2401298,performance metrics
+2401445,dynamic play index
+2401445,dynamic time warping
+2401445,random forest
+2401445,hidden markov model
+2401919,momentum
+2401919,pca-topsis model
+2401919,white noise test
+2401919,grey prediction model
+2401919,acf&pacf
+2403774,tennis athletic potential
+2403774,xgboost
+2403774,momentum quantification
+2403774,temporal convolutional network
+2406176,tennis
+2406176,momentum
+2406176,real-time win probability
+2406176,elo rating system
+2406176,mixed-strategy nash equilibrium
+2406176,quantification model
+2406324,momentum
+2406324,ewma
+2406324,lstm
+2406324,k-means
+2406324,shap
+2409404,momentum
+2409404,mq-sw
+2409404,runs test
+2409404,chi-square test
+2409404,pmt-px
+2409961,momentum
+2409961,gru
+2409961,integrated gradient
+2409961,disentanglement
+2410482,momentum
+2410482,markov chain
+2410482,hypothesistesting
+2410482,state space model
+2410482,kalman filter algorithm
+2418251,momentum
+2418251,rnn
+2418251,pca
+2418251,the msvm model
+2418251,arima
+2425454,monte carlo simulation
+2425454,runs test
+2425454,gsrf
+2425454,factor analysis
+2417004,network
+2417004,flow model
+2417004,water resource management
+2417004,water supply
+2417004,nsga-ii
+2417004,multiple linear regression
+2417831,prediction-based feedback control
+2417831,lake chain simulation
+2417831,multi-objective optimization
+2417831,genetic algorithm
+2419588,adaptive hydrological network
+2419588,equilibrium stakeholder satisfaction
+2419588,model predictive control
+2419588,great lakes water management
+2419588,environmental sensitivity analysis
+2429211,linear program
+2429211,dynamic flow network
+2429211,human-centered
+2429211,multigranular approach
+2400860,risk analysis
+2400860,risk-capital asset pricing model
+2400860,sperman-critic
+2400860,ahp
+2400860,building preservation model
+2401102,extreme weather event
+2401102,property insurance
+2401102,arima
+2401102,dual-objective optimization
+2401102,ahp
+2407414,extreme weather
+2407414,ruin theory
+2407414,ahp-ewm
+2407414,ge matrix
+2407414,logistic model
+2410578,sustainability
+2410578,cost-benefit analysis
+2410578,topsis
+2410578,fuzzy comprehensive evaluation
+2410889,underwriting decision model
+2410889,monte carlo simulations
+2410889,risk checklist
+2410889,goal programming
+2410889,ewm-topsis
+2410889,protection value model
+2413552,climate change
+2413552,property insurance
+2413552,risk assessment
+2413552,community development
+2413552,historical heritage protection
+2413552,multi-scale geographically weighted regression
+2413565,ewm
+2413565,ahp
+2413565,complementary vector
+2413565,maximum matching
+2413565,multiple linear regression
+2417340,networks of iwt
+2417340,optimization of annealing algorithm
+2417340,probability distribution
+2422054,illegal wildlife trade
+2422054,discrete dynamic optimization models
+2422054,entropy method
+2426941,illegal wildlife trade
+2426941,ahp-ewm
+2426941,siwt model
+2426941,lotka-volterra equation

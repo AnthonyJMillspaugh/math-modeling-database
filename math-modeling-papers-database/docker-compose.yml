@@ -1,0 +1,37 @@
+version: '3.8'
+
+# From: 
+# - https://medium.com/@chrischuck35/how-to-create-a-mysql-instance-with-docker-compose-1598f3cc1bee
+# - https://iamvickyav.medium.com/mysql-init-script-on-docker-compose-e53677102e48
+# - https://github.com/Guuzzeji/CSCI-367-Group-Project/blob/main/db/docker-compose.yml
+
+services:
+  mysql:
+    image: mysql
+    container_name: mysql-db
+    environment:
+      #! NOTE: Have to create db name here for user to have access to db
+      MYSQL_DATABASE: math_modeling_paper
+      MYSQL_USER: exampleUser
+      MYSQL_PASSWORD: pwd12345
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: mysql
+    ports:
+      - '4040:3306'
+    networks:
+      - backnet # What is this?
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./create-database.sql:/docker-entrypoint-initdb.d/1.sql
+      - ./problem_table.csv:/var/lib/mysql-files/problem_table.csv
+      - ./paper_table.csv:/var/lib/mysql-files/paper_table.csv
+      - ./keyword_table.csv:/var/lib/mysql-files/keyword_table.csv
+      - ./paper_keyword_table.csv:/var/lib/mysql-files/paper_keyword_table.csv
+
+networks:
+  backnet:
+    driver: bridge
+
+volumes:
+  mysql-data:
+    driver: local
