@@ -11,8 +11,8 @@
   <h1 class="center">COMAP Compass</h1>
 
   <div id="searchDiv" class="center">
-    <input type="text" id="search" name="query" placeholder="Enter search terms here...">
-    <button type="submit">Search</button>
+    <input type="text" id="search" name="search" placeholder="Enter search terms here...">
+    <button type="submit" id="submit" onclick="search_titles()">Search</button>
   </div>
 
   <div class="center">
@@ -68,6 +68,12 @@
       <option value="hooray">
     </datalist>
   </div>
+
+  <div id="returnedSearchArea">
+    <h2 id="searchResults"></h2>
+  </div>
+
+  <script src="website-js.js"></script>
 
   <!-- Commented off just in case we need it later, feel free to remove if not :) -->
 
