@@ -1,23 +1,34 @@
 /* JS file :) */
 
-document.getElementByID("submit").addEventListener("click", search_titles());
+document.getElementById("submit").addEventListener("click", search_titles);
 
 function search_titles() {
     let input = document.getElementById('search').value.toLowerCase();
-
-    const testList = ["This", "Is", "The", "Test", "Search", "List", "Until", "We", "Connect", "The", "Database"];
     let results = [];
 
-    for (i = 0; i < testList.length; i++) {
-        if (testList[i].toLowerCase().includes(input)) {
-            results.push(testList[i]);
-        }
-    }
+     fetch('http://localhost:3000/paper')
+        .then(response => response.json())
+        .then(data => {
+            const paperTitles = data.map(item => item.title);
 
-    const resultsDiv = document.getElementById("searchResults");
-    if (results.length > 0) {
-        resultsDiv.innerHTML = results.join(", ");
-    } else {
-        resultsDiv.innerHTML = "No matches found.";
-    }
+            for (let i = 0; i < paperTitles.length; i++) {
+                if (input === "") {
+                    break;
+                } else if (paperTitles[i].toLowerCase().includes(input)) {
+                    results.push(paperTitles[i]);
+                }
+            }
+
+            const resultsDiv = document.getElementById("searchResults");
+            if (results.length > 0) {
+                resultsDiv.innerHTML = results.join(", ");
+            } else if (results.length === 0 && input === "") {
+                resultsDiv.innerHTML = "";
+            } else {
+                resultsDiv.innerHTML = "No matches found.";
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
 }
