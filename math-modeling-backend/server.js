@@ -37,6 +37,8 @@ app.get('/problem', (req, res) => {
     });
 });
 
+
+/*
 app.get('/paper', (req, res) => {
     db.query('SELECT * FROM paper', (err, results) => {
         if (err) {
@@ -44,6 +46,45 @@ app.get('/paper', (req, res) => {
             return res.status(500).json({ error: 'Database query failed' });
         }
         res.json(results);
+    });
+});
+
+*/
+
+// Different get paper function?
+app.get('/paper', (req, res) => {
+    const sql = `
+        SELECT 
+            p.team_control_num, 
+            p.title, 
+            p.year, 
+            p.problem_type, 
+            p.link,
+            GROUP_CONCAT(pk.keyword_text) AS keywords
+        FROM paper p
+        LEFT JOIN paper_keyword pk ON p.team_control_num = pk.team_control_num
+        GROUP BY p.team_control_num
+    `;
+
+    db.query(sql, (err, results) => {
+        if (err) {
+            console.error('Query error:', err);
+            return res.status(500).json({ error: 'Database query failed' });
+        }
+
+        // Way to check results? Idk
+        console.log(results);
+
+        const formattedResults = results.map(row => ({
+            team_control_num: row.team_control_num,
+            title: row.title,
+            year: row.year,
+            problem_type: row.problem_type,
+            link: row.link,
+            keywords: row.keywords ? row.keywords.split(',') : []
+        }));
+
+        res.json(formattedResults);
     });
 });
 
@@ -63,6 +104,10 @@ app.get('/paper_keyword', (req, res) => {
             console.error('Query error:', err);
             return res.status(500).json({ error: 'Database query failed' });
         }
+        
+        // Way to check results? Idk
+        console.log(results);
+
         res.json(results);
     });
 });
