@@ -27,7 +27,7 @@ db.connect((err) => {
 
 /* these blocks are for retrieving the data from the four tables and putting
  * them in json files so the frontend can use the data */
-app.get('/problem', (req, res) => {
+app.get('/api/problem', (req, res) => { // Not needed
     db.query('SELECT * FROM problem', (err, results) => {
         if (err) {
             console.error('Query error:', err);
@@ -52,7 +52,7 @@ app.get('/paper', (req, res) => {
 */
 
 // Different get paper function?
-app.get('/paper', (req, res) => {
+app.get('/api/paper', (req, res) => { // Not needed?
     const sql = `
         SELECT 
             p.team_control_num, 
@@ -88,7 +88,7 @@ app.get('/paper', (req, res) => {
     });
 });
 
-app.get('/keyword', (req, res) => {
+app.get('/api/keyword', (req, res) => {
     db.query('SELECT * FROM keyword', (err, results) => {
         if (err) {
             console.error('Query error:', err);
@@ -98,7 +98,7 @@ app.get('/keyword', (req, res) => {
     });
 });
 
-app.get('/paper_keyword', (req, res) => {
+app.get('/api/paper_keyword', (req, res) => { // Not needed?
     db.query('SELECT * FROM paper_keyword', (err, results) => {
         if (err) {
             console.error('Query error:', err);
@@ -108,6 +108,38 @@ app.get('/paper_keyword', (req, res) => {
         // Way to check results? Idk
         console.log(results);
 
+        res.json(results);
+    });
+});
+
+app.get('/api/result/:keyword', (req, res) => { // Not needed
+    const keyword = req.params.keyword;
+
+    const sql = `
+        SELECT 
+            p.title,
+            p.team_control_num,
+            p.link AS paper_link,
+            p.year,
+            p.problem_type,
+            pr.problem_title,
+            pr.link AS problem_link,
+            GROUP_CONCAT(pk.keyword_text) AS keywords
+        FROM paper_keyword pk
+        JOIN paper p ON pk.team_control_num = p.team_control_num
+        JOIN problem pr ON p.year = pr.year AND p.problem_type = pr.problem_type
+        WHERE pk.keyword_text LIKE ?
+        GROUP BY p.team_control_num
+    `;
+
+    // Use % wildcards for LIKE
+    const queryValue = `%${keyword}%`;
+
+    db.query(sql, [queryValue], (err, results) => {
+        if (err) {
+            console.error('Query error:', err);
+            return res.status(500).json({ error: 'Database query failed' });
+        }
         res.json(results);
     });
 });

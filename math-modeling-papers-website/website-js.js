@@ -2,11 +2,11 @@
 
 document.getElementById("submit").addEventListener("click", search_keywords);
 
-function search_titles() {
+function search_titles() { // Do we want or need this?
     let input = document.getElementById('search').value.toLowerCase();
     let results = [];
 
-     fetch('http://localhost:3000/paper')
+     fetch('http://localhost:3000/api/paper')
         .then(response => response.json())
         .then(data => {
             const paperTitles = data.map(item => item.title);
@@ -38,21 +38,22 @@ function search_keywords() {
     let input = document.getElementById('search').value.toLowerCase();
     let matchingPapers = [];
 
-    fetch('http://localhost:3000/paper')
+    const resultsDiv = document.getElementById("searchResults");
+
+    if (input === "") {
+        resultsDiv.innerHTML = "";
+        return;
+    }
+
+    fetch('http://localhost:3000/api/result/' + input)
         .then(response => response.json())
         .then(data => {
             // Filter papers where any keyword matches the input
-            matchingPapers = data.filter(paper => 
-                paper.keywords &&
-                paper.keywords.some(kw => kw.toLowerCase().includes(input))
-            );
-
-            const resultsDiv = document.getElementById("searchResults");
-
-            if (input === "") {
-                resultsDiv.innerHTML = "";
-                return;
-            }
+            // matchingPapers = data.filter(paper => 
+            //     paper.keywords &&
+            //     paper.keywords.some(kw => kw.toLowerCase().includes(input))
+            // );
+            matchingPapers = data;
 
             if (matchingPapers.length === 0) {
                 resultsDiv.innerHTML = "No matches found.";
@@ -60,15 +61,28 @@ function search_keywords() {
             }
 
             // Create table
-            let table = "<table border='1'><thead><tr><th>Team</th><th>Title</th><th>Year</th><th>Problem</th><th>Link</th><th>Keywords</th></tr></thead><tbody>";
-            matchingPapers.forEach(paper => {
+            let table = `<table border='1'>
+                <thead><tr>
+                    <th>Team</th>
+                    <th>Title</th>
+                    <th>Link</th>
+                    <th>Keywords</th>
+                    <th>Year</th>
+                    <th>Problem</th>
+                    <th>Problem Title</th>
+                    <th>Problem Link</th>
+                </tr></thead>
+                <tbody>`;
+            matchingPapers.forEach(row => {
                 table += `<tr>
-                    <td>${paper.team_control_num}</td>
-                    <td>${paper.title}</td>
-                    <td>${paper.year}</td>
-                    <td>${paper.problem_type}</td>
-                    <td><a href="${paper.link}" target="_blank">View Paper</a></td>
-                    <td>${paper.keywords.join(", ")}</td>
+                    <td>${row.team_control_num}</td>
+                    <td>${row.title}</td>
+                    <td><a href="${row.paper_link}" target="_blank">View Paper</a></td>
+                    <td>${row.keywords ? row.keywords.split(",").join(", ") : ""}</td>
+                    <td>${row.year}</td>
+                    <td>${row.problem_type}</td>
+                    <td>${row.problem_title}</td>
+                    <td><a href="${row.problem_link}" target="_blank">View Problem</a></td>
                 </tr>`;
             });
             table += "</tbody></table>";
@@ -85,20 +99,21 @@ function search_keywords() {
 window.addEventListener("DOMContentLoaded", populateAutocomplete);
 
 function populateAutocomplete() {
-    fetch('http://localhost:3000/paper')
+    fetch('http://localhost:3000/api/keyword')
         .then(response => response.json())
         .then(data => {
             const datalist = document.getElementById("keywords");
-            const allKeywords = data.flatMap(paper => paper.keywords || []);
-            const uniqueKeywords = [...new Set(allKeywords.map(k => k.toLowerCase()))];
+            // Old code
+            //const allKeywords = data.flatMap(paper => paper.keywords || []);
+            //const uniqueKeywords = [...new Set(allKeywords.map(k => k.toLowerCase()))];
 
             // Clear previous options
             datalist.innerHTML = "";
 
             // Add options to datalist
-            uniqueKeywords.forEach(keyword => {
+            data.forEach(row => {
                 const option = document.createElement("option");
-                option.value = keyword;
+                option.value = row.keyword_text;
                 datalist.appendChild(option);
             });
         })
