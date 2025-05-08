@@ -35,16 +35,13 @@ div[id="searchDiv"] {
     text-align: center;
 }
 
-button {
-    margin-left: 10%;
-}
-
 input#search {
     background-color: var(--secondary-color);
     padding: 10px;
     margin: 15px;
     width: 400px;
     color: white;
+    border-radius: 25px;
 }
 
 button {
@@ -52,6 +49,7 @@ button {
     padding: 10px;
     margin: 15px;
     color: white;
+    border-radius: 25px;
 }
 
 div[id="yearBox"], div[id="problemBox"] {
@@ -61,7 +59,7 @@ div[id="yearBox"], div[id="problemBox"] {
     padding: 10px;
 
     border: 1px solid gray;
-    border-radius: 5px;
+    border-radius: 25px;
     background-color: var(--secondary-color);
 }
 
