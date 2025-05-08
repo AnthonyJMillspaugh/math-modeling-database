@@ -19,6 +19,7 @@ h1 {
 
 div[id="searchDiv"] {
     text-align: center;
+    height: 30px;
 }
 
 button {
@@ -26,7 +27,7 @@ button {
 }
 
 div[id="autoDropDown"] {
-    padding-top: 20px;
+    padding-top: 1000px;
     text-align: center;
 }
 
@@ -50,6 +51,10 @@ div[id="problemBox"] {
 
     border: 1px solid gray;
     border-radius: 5px;
+}
+
+div[id="returnedSearchArea"] {
+    padding-top: 20px;
 }
 
 
