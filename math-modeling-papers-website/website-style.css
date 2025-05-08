@@ -104,3 +104,7 @@ tr:nth-child(odd) {
 tr:nth-child(even) {
     background-color: var(--table-even-color);
 }
+
+a {
+    color: #0000EE; /*Hard code link color so it doesn't change*/
+}
