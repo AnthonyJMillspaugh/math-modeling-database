@@ -37,7 +37,7 @@ div[id="yearBox"] {
     text-align: center;
 
     padding: 10px;
-    height: 80px;
+    height: 60px;
 
     border: 1px solid gray;
     border-radius: 5px;
@@ -48,7 +48,7 @@ div[id="problemBox"] {
     text-align: center;
 
     padding: 10px;
-    height: 80px;
+    height: 60px;
 
     border: 1px solid gray;
     border-radius: 5px;
