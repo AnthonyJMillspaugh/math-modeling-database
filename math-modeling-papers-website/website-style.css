@@ -7,6 +7,7 @@
     --dark-text-color: #a72608;
     background-color: var(--bg-color);
     color: var(--secondary-color);
+    font-family:sans-serif;
 }
 
 /* This function can be used to center any div or block elements, though im unsure if itll work well with inline elements */
@@ -53,7 +54,6 @@ button {
 }
 
 div[id="yearBox"], div[id="problemBox"] {
-    font-family:sans-serif;
     text-align: center;
     color: white;
 
