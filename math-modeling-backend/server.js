@@ -124,11 +124,15 @@ app.get('/api/result/:keyword', (req, res) => { // Not needed
             p.problem_type,
             pr.problem_title,
             pr.link AS problem_link,
-            GROUP_CONCAT(pk.keyword_text) AS keywords
+            GROUP_CONCAT(pk.keyword_text ORDER BY pk.keyword_text SEPARATOR ', ') AS keywords
         FROM paper_keyword pk
         JOIN paper p ON pk.team_control_num = p.team_control_num
         JOIN problem pr ON p.year = pr.year AND p.problem_type = pr.problem_type
-        WHERE pk.keyword_text LIKE ?
+        WHERE p.team_control_num IN (
+            SELECT team_control_num
+            FROM paper_keyword
+            WHERE keyword_text LIKE ?
+        )
         GROUP BY p.team_control_num
     `;
 
