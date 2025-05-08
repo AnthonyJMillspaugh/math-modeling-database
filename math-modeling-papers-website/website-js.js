@@ -35,17 +35,27 @@ function search_titles() { // Do we want or need this?
 
 
 function search_keywords() {
-    let input = document.getElementById('search').value.toLowerCase();
+    // Get the keyword
+    const keyword = document.getElementById('search').value.toLowerCase();
     let matchingPapers = [];
+
+    // Get the parameters
+    const params = new URLSearchParams();
+    const yearBoxes = document.querySelectorAll('#yearBox input[type="checkbox"]:checked');
+    const selectedYears = Array.from(yearBoxes).map(cb => cb.value);
+    const problemBoxes = document.querySelectorAll('#problemBox input[type="checkbox"]:checked');
+    const selectedProblems = Array.from(problemBoxes).map(cb => cb.value);
+    selectedYears.forEach(year => params.append('year', year));
+    selectedProblems.forEach(type => params.append('problem_type', type));
 
     const resultsDiv = document.getElementById("searchResults");
 
-    if (input === "") {
+    if (keyword === "") {
         resultsDiv.innerHTML = "";
         return;
     }
 
-    fetch('http://localhost:3000/api/result/' + input)
+    fetch('http://localhost:3000/api/result/' + keyword + '?' + params.toString())
         .then(response => response.json())
         .then(data => {
             // Filter papers where any keyword matches the input

@@ -25,32 +25,6 @@ db.connect((err) => {
   console.log('Connected to MySQL');
 });
 
-/* these blocks are for retrieving the data from the four tables and putting
- * them in json files so the frontend can use the data */
-app.get('/api/problem', (req, res) => { // Not needed
-    db.query('SELECT * FROM problem', (err, results) => {
-        if (err) {
-            console.error('Query error:', err);
-            return res.status(500).json({ error: 'Database query failed' });
-        }
-        res.json(results);
-    });
-});
-
-
-/*
-app.get('/paper', (req, res) => {
-    db.query('SELECT * FROM paper', (err, results) => {
-        if (err) {
-            console.error('Query error:', err);
-            return res.status(500).json({ error: 'Database query failed' });
-        }
-        res.json(results);
-    });
-});
-
-*/
-
 // Different get paper function?
 app.get('/api/paper', (req, res) => { // Not needed?
     const sql = `
@@ -98,24 +72,15 @@ app.get('/api/keyword', (req, res) => {
     });
 });
 
-app.get('/api/paper_keyword', (req, res) => { // Not needed?
-    db.query('SELECT * FROM paper_keyword', (err, results) => {
-        if (err) {
-            console.error('Query error:', err);
-            return res.status(500).json({ error: 'Database query failed' });
-        }
-        
-        // Way to check results? Idk
-        console.log(results);
-
-        res.json(results);
-    });
-});
-
-app.get('/api/result/:keyword', (req, res) => { // Not needed
+app.get('/api/result/:keyword', (req, res) => {
     const keyword = req.params.keyword;
+    let { year, problem_type } = req.query;
 
-    const sql = `
+    // Normalize to arrays if only one item
+    year = year ? (Array.isArray(year) ? year : [year]) : [];
+    problem_type = problem_type ? (Array.isArray(problem_type) ? problem_type : [problem_type]) : [];
+
+    let sql = `
         SELECT 
             p.title,
             p.team_control_num,
@@ -133,13 +98,25 @@ app.get('/api/result/:keyword', (req, res) => { // Not needed
             FROM paper_keyword
             WHERE keyword_text LIKE ?
         )
-        GROUP BY p.team_control_num
     `;
 
-    // Use % wildcards for LIKE
-    const queryValue = `%${keyword}%`;
+    const values = [`%${keyword}%`];
 
-    db.query(sql, [queryValue], (err, results) => {
+    // Add year filter
+    if (year.length > 0) {
+        sql += ` AND p.year IN (${year.map(() => '?').join(',')})`;
+        values.push(...year);
+    }
+
+    // Add problem_type filter
+    if (problem_type.length > 0) {
+        sql += ` AND p.problem_type IN (${problem_type.map(() => '?').join(',')})`;
+        values.push(...problem_type);
+    }
+
+    sql += ` GROUP BY p.team_control_num`;
+
+    db.query(sql, values, (err, results) => {
         if (err) {
             console.error('Query error:', err);
             return res.status(500).json({ error: 'Database query failed' });
