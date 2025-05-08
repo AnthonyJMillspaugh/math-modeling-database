@@ -5,7 +5,7 @@ document.getElementById("submit").addEventListener("click", search_keywords);
 // Get the input field
 var input = document.getElementById("search");
 
-// Execute a function when the user presses a key on the keyboard
+// Submit with Enter key
 input.addEventListener("keypress", function(event) {
   // If the user presses the "Enter" key on the keyboard
   if (event.key === "Enter") {
