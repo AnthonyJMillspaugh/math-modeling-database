@@ -1,3 +1,14 @@
+/* Color palatte: https://coolors.co/e6eed6-dde2c6-bbc5aa-a72608-090c02*/
+:root {
+    --table-odd-color: #dde2c6;
+    --table-even-color: #e6eed6;
+    --bg-color: #bbc5aa;
+    --secondary-color: #090c02;
+    --dark-text-color: #a72608;
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+}
+
 /* This function can be used to center any div or block elements, though im unsure if itll work well with inline elements */
 .center {
     margin-left: 25%;
@@ -12,7 +23,7 @@
 }
 
 h1 {
-    color: blue;
+    color: var(--dark-text-color);
     text-align: center;
     font-size: 75px;
     font-family: cursive;
@@ -20,19 +31,40 @@ h1 {
 
 div[id="searchDiv"] {
     text-align: center;
-    height: 30px;
 }
 
 button {
     margin-left: 10%;
 }
 
-div[id="autoDropDown"] {
-    padding-top: 1000px;
-    text-align: center;
+input#search {
+    background-color: var(--secondary-color);
+    padding: 10px;
+    margin: 15px;
+    width: 400px;
+    color: white;
 }
 
-div[id="yearBox"] {
+button {
+    background-color: var(--dark-text-color);
+    padding: 10px;
+    margin: 15px;
+    color: white;
+}
+
+div[id="yearBox"], div[id="problemBox"] {
+    font-family:sans-serif;
+    text-align: center;
+    color: white;
+
+    padding: 10px;
+
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+}
+
+/* div[id="problemBox"] {
     font-family:sans-serif;
     text-align: center;
 
@@ -41,18 +73,7 @@ div[id="yearBox"] {
 
     border: 1px solid gray;
     border-radius: 5px;
-}
-
-div[id="problemBox"] {
-    font-family:sans-serif;
-    text-align: center;
-
-    padding: 10px;
-    height: 60px;
-
-    border: 1px solid gray;
-    border-radius: 5px;
-}
+} */
 
 div[id="returnedSearchArea"] {
     padding-top: 20px;
@@ -65,3 +86,21 @@ div[id="returnedSearchArea"] {
     width: 100px;
 }
 
+th {
+    padding: 24px;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+td {
+    padding: 24px;
+    text-align: center;
+}
+
+tr:nth-child(odd) {
+    background-color: var(--table-odd-color);
+}
+
+tr:nth-child(even) {
+    background-color: var(--table-even-color);
+}

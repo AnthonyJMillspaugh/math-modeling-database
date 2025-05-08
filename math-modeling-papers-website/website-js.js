@@ -73,27 +73,27 @@ function search_keywords() {
             // Create table
             let table = `<table border='1'>
                 <thead><tr>
-                    <th style="padding: 24px; background-color: #5DE2E7;">Team</th>
-                    <th style="padding: 24px; background-color: #5DE2E7;">Title</th>
-                    <th style="padding: 24px; background-color: #5DE2E7;">Link</th>
-                    <th style="padding: 24px; background-color: #5DE2E7;">Keywords</th>
-                    <th style="padding: 24px; background-color: #5DE2E7;">Year</th>
-                    <th style="padding: 24px; background-color: #5DE2E7;">Problem</th>
-                    <th style="padding: 24px; background-color: #5DE2E7;">Problem Title</th>
-                    <th style="padding: 24px; background-color: #5DE2E7;">Problem Link</th>
+                    <th>Team</th>
+                    <th>Title</th>
+                    <th>Link</th>
+                    <th>Keywords</th>
+                    <th>Year</th>
+                    <th>Problem</th>
+                    <th>Problem Title</th>
+                    <th>Problem Link</th>
                 </tr></thead>
                 <tbody>`;
                 matchingPapers.forEach((row, index) => {
-                    const rowColor = index % 2 === 1 ? "#5DE2E7" : "#EFC3CA"; // light gray and white
-                    table += `<tr style="background-color: ${rowColor};">
-                        <td style="padding: 24px; text-align: center">${row.team_control_num}</td>
-                        <td style="padding: 24px; text-align: center">${row.title}</td>
-                        <td style="padding: 24px; text-align: center"><a href="${row.paper_link}" target="_blank">View Paper</a></td>
-                        <td style="padding: 24px; text-align: center">${row.keywords ? row.keywords.split(",").join(", <br><br>") : ""}</td>
-                        <td style="padding: 24px; text-align: center">${row.year}</td>
-                        <td style="padding: 24px; text-align: center">${row.problem_type}</td>
-                        <td style="padding: 24px; text-align: center">${row.problem_title}</td>
-                        <td style="padding: 24px; text-align: center"><a href="${row.problem_link}" target="_blank">View Problem</a></td>
+                    //const rowColor = index % 2 === 1 ? "#5DE2E7" : "#EFC3CA"; // light gray and white
+                    table += `<tr>
+                        <td>${row.team_control_num}</td>
+                        <td>${row.title}</td>
+                        <td><a href="${row.paper_link}" target="_blank">View Paper</a></td>
+                        <td>${row.keywords ? row.keywords.split(",").join(", <br><br>") : ""}</td>
+                        <td>${row.year}</td>
+                        <td>${row.problem_type}</td>
+                        <td>${row.problem_title}</td>
+                        <td><a href="${row.problem_link}" target="_blank">View Problem</a></td>
                     </tr>`;
                 });
             table += "</tbody></table>";
