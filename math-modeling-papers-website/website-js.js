@@ -2,6 +2,21 @@
 
 document.getElementById("submit").addEventListener("click", search_keywords);
 
+// Get the input field
+var input = document.getElementById("search");
+
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    input.blur();
+    // Trigger the button element with a click
+    document.getElementById("submit").click();
+  }
+});
+
 function search_titles() { // Do we want or need this?
     let input = document.getElementById('search').value.toLowerCase();
     let results = [];
