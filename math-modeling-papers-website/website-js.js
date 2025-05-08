@@ -117,16 +117,35 @@ function populateAutocomplete() {
             // Old code
             //const allKeywords = data.flatMap(paper => paper.keywords || []);
             //const uniqueKeywords = [...new Set(allKeywords.map(k => k.toLowerCase()))];
+            const input = document.getElementById('search');
 
-            // Clear previous options
-            datalist.innerHTML = "";
+            // Update whenever the user types
+            input.addEventListener('input', () => {
+                const value = input.value.toLowerCase();
+                datalist.innerHTML = ''; // Clear old options
 
-            // Add options to datalist
-            data.forEach(row => {
-                const option = document.createElement("option");
-                option.value = row.keyword_text;
-                datalist.appendChild(option);
+                const numItems = 10; // The max number of items for the datalist
+                const filtered = data
+                .filter(row => row.keyword_text.toLowerCase().includes(value))
+                .slice(0, numItems); // Limit to first 10 matches
+
+                filtered.forEach(row => {
+                    const option = document.createElement("option");
+                    option.value = row.keyword_text;
+                    datalist.appendChild(option);
+                });
             });
+
+            // // Clear previous options
+            // datalist.innerHTML = "";
+
+            // // Add options to datalist
+            // const numItems = 10; // The max number of items for the datalist
+            // data.slice(0,numItems).forEach(row => {
+            //     const option = document.createElement("option");
+            //     option.value = row.keyword_text;
+            //     datalist.appendChild(option);
+            // });
         })
         .catch(error => {
             console.error('Error loading autocomplete keywords:', error);
