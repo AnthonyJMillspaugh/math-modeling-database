@@ -14,6 +14,7 @@
 h1 {
     color: blue;
     text-align: center;
+    font-size: 75px;
     font-family: cursive;
 }
 
@@ -57,7 +58,10 @@ div[id="returnedSearchArea"] {
     padding-top: 20px;
 }
 
-
-
-
+#logoImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+}
 
