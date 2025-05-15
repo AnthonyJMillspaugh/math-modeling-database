@@ -11,15 +11,28 @@
   <img src="../math-modeling-assets/COMAP-logo-EF3340.svg" alt="Logo" id="logoImage">
   <h1 class="center">COMAP Compass</h1>
 
+
+  <div class="center">
+    <div id="info">
+      <p>
+        Welcome to COMAP Compass! Here you can find previous <em>Outstanding</em> awarded papers from the annual COMAP math modeling competitions for undergraduate students. Enter part or all of a keyword and a table will display with all of the papers that used that keyword below!
+      </p>
+      <p>
+        Note: This is not officially sanctioned by COMAP. This is a class project.
+      </p>
+    </div>
+  </div>
+
   <div id="searchDiv" class="center">
     <input type="text" id="search" name="search" list="keywords" placeholder="🔎 Enter keyword here (can be parital)...">
     <datalist id="keywords"></datalist>
     <button type="submit" id="submit" onclick="search_keywords()">Search</button>
   </div>
 
+
   <div class="specialcenter">
     <div id="yearBox">
-      <p>Years:</p>
+      <p><u>Years:</u></p><br><br>
       <input type="checkbox" id="2017" name="2017" value="2017" checked>
       <label for="2017"> 2017</label>
       <input type="checkbox" id="2018" name="2018" value="2018" checked>
@@ -27,7 +40,7 @@
       <input type="checkbox" id="2019" name="2019" value="2019" checked>
       <label for="2019"> 2019</label>
       <input type="checkbox" id="2020" name="2020" value="2020" checked>
-      <label for="2020"> 2020</label><br><br>
+      <label for="2020"> 2020</label><br><br><br>
       <input type="checkbox" id="2021" name="2021" value="2021" checked>
       <label for="2021"> 2021</label>
       <input type="checkbox" id="2022" name="2022" value="2022" checked>
@@ -35,27 +48,39 @@
       <input type="checkbox" id="2023" name="2023" value="2023" checked>
       <label for="2023"> 2023</label>
       <input type="checkbox" id="2024" name="2024" value="2024" checked>
-      <label for="2024"> 2024</label>
+      <label for="2024"> 2024</label><br><br><br><br><br><br><br><br>
+      <button onclick="selectAll('yearBox')">Select All</button>
+      <button onclick="deselectAll('yearBox')">Deselect All</button>
     </div>
 
     <div id="problemBox">
-      <p>Problem types:</p>
-      <input type="checkbox" id="a" name="a" value="a" checked>
-      <label for="a"> A</label>
-      <input type="checkbox" id="b" name="b" value="b" checked>
-      <label for="b"> B</label>
-      <input type="checkbox" id="c" name="c" value="c" checked>
-      <label for="c"> C</label>
-      <input type="checkbox" id="d" name="d" value="d" checked>
-      <label for="d"> D</label><br><br>
-      <input type="checkbox" id="e" name="e" value="e" checked>
-      <label for="e"> E</label>
-      <input type="checkbox" id="f" name="f" value="f" checked>
-      <label for="f"> F</label>
-      <input type="checkbox" id="y" name="y" value="y" checked>
-      <label for="y"> Y</label>
-      <input type="checkbox" id="z" name="z" value="z" checked>
-      <label for="z"> Z</label>
+      <p><u>Problem types:</u></p><br>
+
+      <div class="problem-columns">
+      <div class="left-problems">
+        <input type="checkbox" id="a" name="a" value="a" checked>
+        <label for="a"> A: Continuous</label><br>
+        <input type="checkbox" id="c" name="c" value="c" checked>
+        <label for="c"> C: Data insights</label><br>
+        <input type="checkbox" id="e" name="e" value="e" checked>
+        <label for="e"> E: Sustainability</label><br>
+        <input type="checkbox" id="y" name="y" value="y" checked>
+        <label for="y"> Y: Additional 2023</label>
+      </div>
+      <div class="right-problems">
+        <input type="checkbox" id="b" name="b" value="b" checked>
+        <label for="b"> B: Discrete</label><br>
+        <input type="checkbox" id="d" name="d" value="d" checked>
+        <label for="d"> D: Ops research</label><br>
+        <input type="checkbox" id="f" name="f" value="f" checked>
+        <label for="f"> F: Policy</label><br>
+        <input type="checkbox" id="z" name="z" value="z" checked>
+        <label for="z"> Z: Additional 2023</label>
+      </div>
+      </div>
+      <br>
+      <button onclick="selectAll('problemBox')">Select All</button>
+      <button onclick="deselectAll('problemBox')">Deselect All</button>
     </div>
   </div>
 

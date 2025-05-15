@@ -65,12 +65,13 @@ function search_keywords() {
 
     const resultsDiv = document.getElementById("searchResults");
 
-    if (keyword === "") {
-        resultsDiv.innerHTML = "";
-        return;
-    }
+    const baseUrl = keyword === "" 
+    ? 'http://localhost:3000/api/result_all?' 
+    : 'http://localhost:3000/api/result/' + keyword + '?';
 
-    fetch('http://localhost:3000/api/result/' + keyword + '?' + params.toString())
+    fetch(baseUrl + params.toString())
+
+    //fetch('http://localhost:3000/api/result/' + keyword + '?' + params.toString())
         .then(response => response.json())
         .then(data => {
             // Filter papers where any keyword matches the input
@@ -118,6 +119,21 @@ function search_keywords() {
         .catch(error => {
             console.error('Error fetching data:', error);
         });
+}
+
+
+
+function deselectAll(boxId) {
+    const box = document.getElementById(boxId);
+    const checkboxes = box.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(cb => cb.checked = false);
+}
+
+
+function selectAll(boxId) {
+    const box = document.getElementById(boxId);
+    const checkboxes = box.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(cb => cb.checked = true);
 }
 
 
