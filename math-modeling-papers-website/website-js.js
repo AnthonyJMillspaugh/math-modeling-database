@@ -17,38 +17,6 @@ input.addEventListener("keypress", function(event) {
   }
 });
 
-function search_titles() { // Do we want or need this?
-    let input = document.getElementById('search').value.toLowerCase();
-    let results = [];
-
-     fetch('http://localhost:3000/api/paper')
-        .then(response => response.json())
-        .then(data => {
-            const paperTitles = data.map(item => item.title);
-
-            for (let i = 0; i < paperTitles.length; i++) {
-                if (input === "") {
-                    break;
-                } else if (paperTitles[i].toLowerCase().includes(input)) {
-                    results.push(paperTitles[i]);
-                }
-            }
-
-            const resultsDiv = document.getElementById("searchResults");
-            if (results.length > 0) {
-                resultsDiv.innerHTML = results.join(", ");
-            } else if (results.length === 0 && input === "") {
-                resultsDiv.innerHTML = "";
-            } else {
-                resultsDiv.innerHTML = "No matches found.";
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-        });
-}
-
-
 function search_keywords() {
     // Get the keyword
     const keyword = document.getElementById('search').value.toLowerCase();
@@ -69,11 +37,6 @@ function search_keywords() {
     fetch('http://localhost:3000/api/result/?' + params.toString())
         .then(response => response.json())
         .then(data => {
-            // Filter papers where any keyword matches the input
-            // matchingPapers = data.filter(paper => 
-            //     paper.keywords &&
-            //     paper.keywords.some(kw => kw.toLowerCase().includes(input))
-            // );
             matchingPapers = data;
 
             if (matchingPapers.length === 0) {
@@ -140,9 +103,6 @@ function populateAutocomplete() {
         .then(response => response.json())
         .then(data => {
             const datalist = document.getElementById("keywords");
-            // Old code
-            //const allKeywords = data.flatMap(paper => paper.keywords || []);
-            //const uniqueKeywords = [...new Set(allKeywords.map(k => k.toLowerCase()))];
             const input = document.getElementById('search');
 
             // Update whenever the user types
@@ -162,16 +122,6 @@ function populateAutocomplete() {
                 });
             });
 
-            // // Clear previous options
-            // datalist.innerHTML = "";
-
-            // // Add options to datalist
-            // const numItems = 10; // The max number of items for the datalist
-            // data.slice(0,numItems).forEach(row => {
-            //     const option = document.createElement("option");
-            //     option.value = row.keyword_text;
-            //     datalist.appendChild(option);
-            // });
         })
         .catch(error => {
             console.error('Error loading autocomplete keywords:', error);

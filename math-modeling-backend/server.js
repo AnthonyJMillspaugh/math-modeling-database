@@ -25,43 +25,6 @@ db.connect((err) => {
   console.log('Connected to MySQL');
 });
 
-// Different get paper function?
-app.get('/api/paper', (req, res) => { // Not needed?
-    const sql = `
-        SELECT 
-            p.team_control_num, 
-            p.title, 
-            p.year, 
-            p.problem_type, 
-            p.link,
-            GROUP_CONCAT(pk.keyword_text) AS keywords
-        FROM paper p
-        LEFT JOIN paper_keyword pk ON p.team_control_num = pk.team_control_num
-        GROUP BY p.team_control_num
-    `;
-
-    db.query(sql, (err, results) => {
-        if (err) {
-            console.error('Query error:', err);
-            return res.status(500).json({ error: 'Database query failed' });
-        }
-
-        // Way to check results? Idk
-        console.log(results);
-
-        const formattedResults = results.map(row => ({
-            team_control_num: row.team_control_num,
-            title: row.title,
-            year: row.year,
-            problem_type: row.problem_type,
-            link: row.link,
-            keywords: row.keywords ? row.keywords.split(',') : []
-        }));
-
-        res.json(formattedResults);
-    });
-});
-
 app.get('/api/keyword', (req, res) => {
     db.query('SELECT * FROM keyword', (err, results) => {
         if (err) {
