@@ -72,9 +72,8 @@ app.get('/api/keyword', (req, res) => {
     });
 });
 
-app.get('/api/result/:keyword', (req, res) => {
-    const keyword = req.params.keyword;
-    let { year, problem_type } = req.query;
+app.get('/api/result', (req, res) => {
+    let { keyword, year, problem_type } = req.query;
 
     // Normalize to arrays if only one item
     year = year ? (Array.isArray(year) ? year : [year]) : [];
@@ -93,28 +92,42 @@ app.get('/api/result/:keyword', (req, res) => {
         FROM paper_keyword pk
         JOIN paper p ON pk.team_control_num = p.team_control_num
         JOIN problem pr ON p.year = pr.year AND p.problem_type = pr.problem_type
-        WHERE p.team_control_num IN (
-            SELECT team_control_num
-            FROM paper_keyword
-            WHERE keyword_text LIKE ?
-        )
     `;
 
-    const values = [`%${keyword}%`];
+    const values = [];
+    const whereClauses = [];
 
-    // Add year filter
+    // Keyword filter
+    if (keyword) {
+        sql += `
+            WHERE p.team_control_num IN (
+                SELECT team_control_num
+                FROM paper_keyword
+                WHERE keyword_text LIKE ?
+            )
+        `;
+        values.push(`%${keyword}%`);
+    }
+
+    // Year filter
     if (year.length > 0) {
-        sql += ` AND p.year IN (${year.map(() => '?').join(',')})`;
+        whereClauses.push(`p.year IN (${year.map(() => '?').join(',')})`);
         values.push(...year);
     }
 
-    // Add problem_type filter
+    // Problem type filter
     if (problem_type.length > 0) {
-        sql += ` AND p.problem_type IN (${problem_type.map(() => '?').join(',')})`;
+        whereClauses.push(`p.problem_type IN (${problem_type.map(() => '?').join(',')})`);
         values.push(...problem_type);
     }
 
-    sql += ` GROUP BY p.team_control_num`;
+    // Add additional filters to the main WHERE clause
+    if (whereClauses.length > 0) {
+        sql += keyword ? ' AND ' : ' WHERE ';
+        sql += whereClauses.join(' AND ');
+    }
+
+    sql += ` GROUP BY p.team_control_num ORDER BY p.year, p.problem_type`;
 
     db.query(sql, values, (err, results) => {
         if (err) {

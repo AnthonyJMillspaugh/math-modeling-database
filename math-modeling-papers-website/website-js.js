@@ -60,18 +60,13 @@ function search_keywords() {
     const selectedYears = Array.from(yearBoxes).map(cb => cb.value);
     const problemBoxes = document.querySelectorAll('#problemBox input[type="checkbox"]:checked');
     const selectedProblems = Array.from(problemBoxes).map(cb => cb.value);
+    params.append('keyword', keyword);
     selectedYears.forEach(year => params.append('year', year));
     selectedProblems.forEach(type => params.append('problem_type', type));
 
     const resultsDiv = document.getElementById("searchResults");
 
-    const baseUrl = keyword === "" 
-    ? 'http://localhost:3000/api/result_all?' 
-    : 'http://localhost:3000/api/result/' + keyword + '?';
-
-    fetch(baseUrl + params.toString())
-
-    //fetch('http://localhost:3000/api/result/' + keyword + '?' + params.toString())
+    fetch('http://localhost:3000/api/result/?' + params.toString())
         .then(response => response.json())
         .then(data => {
             // Filter papers where any keyword matches the input
