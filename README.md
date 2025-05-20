@@ -1,5 +1,9 @@
+![COMAP Compass website image](./math-modeling-assets/COMAP-Compass-Website.png "COMAP Compass Website")
+
 # COMAP Compass
 CSCI 367 FINAL Database/Web Programming Project
+
+By Kade, Matthew, and Anthony
 
 ## Overview
 ### Inspiration:
