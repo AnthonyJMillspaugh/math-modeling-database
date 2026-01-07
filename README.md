@@ -1,4 +1,4 @@
-![COMAP Compass website image](./math-modeling-assets/COMAP-Compass-Website.png "COMAP Compass Website")
+![COMAP Compass website image](./math-modeling-papers-website/assets/COMAP-Compass-Website.png "COMAP Compass Website")
 
 # COMAP Compass
 CSCI 367 FINAL Database/Web Programming Project
@@ -53,4 +53,18 @@ Then run the following command to start the server:
 node server.js
 ```
 
-Then to run the website, copy the path of the website.html file located in the math-modeling-papers-website folder and paste it into a browser's address bar.
+> [!NOTE]
+> If you get an error, try running `npm insall express` first.
+
+### Running the website
+
+Now that the server is running, open another terminal and navigate to the math-modeling-papers-website folder.
+Run this command:
+
+```bash
+npx serve .
+```
+
+Paste the local link it gives you into your web browser.
+
+If you don't want to install serve, you can instead copy the path of the index.html file located in the math-modeling-papers-website folder and paste it into your browser's address bar.
