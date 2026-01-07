@@ -1,3 +1,4 @@
 # Mac/OSX
 .DS_Store
+node_modules/
 /math-modeling-papers-website/node_modules/
