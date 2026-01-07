@@ -54,7 +54,7 @@ node server.js
 ```
 
 > [!NOTE]
-> If you get an error, try running `npm insall express` first.
+> If you get an error, try running `npm install express` first.
 
 ### Running the website
 
